@@ -1,0 +1,120 @@
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background: linear-gradient(135deg, #0a0adf, #4a6cf7); /* Gradient background */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column; /* Allow elements to stack vertically */
+    animation: fadeIn 1s ease-in-out; /* Fade-in animation */
+}
+
+/* Heading styles */
+h1 {
+    color: white;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px; /* Add space between the heading and the container */
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Subtle text shadow */
+}
+
+/* Container to center the content */
+.container {
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+    border-radius: 15px; /* Rounded corners */
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Soft shadow around the container */
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Input field styles */
+input {
+    padding: 10px;
+    font-size: 1rem;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 2px solid #ddd;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #4a6cf7;
+    background-color: rgba(255, 255, 255, 0.8); /* Light background on focus */
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Button styles */
+button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    background-color: #4a6cf7;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: white;
+    color: #4a6cf7;
+    border-color: #4a6cf7;
+    transform: scale(1.1); /* Slightly enlarge the button */
+}
+
+/* Result text styles */
+#result {
+    margin-top: 20px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+#result.palindrome {
+    color: #4a6cf7; /* Blue for palindrome */
+}
+
+#result.not-palindrome {
+    color: #ff4d4d; /* Red for non-palindrome */
+}
+
+/* Description text */
+.description {
+    margin-top: 30px;
+    font-size: 1rem;
+    color: white;
+    line-height: 1.6;
+    text-align: center; /* Center-align the description */
+}
+
+/* Animation for fade-in effect */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem; /* Smaller heading on mobile */
+    }
+    input, button {
+        width: 100%; /* Full-width input and button on mobile */
+        margin-bottom: 15px;
+    }
+    .container {
+        padding: 20px;
+        max-width: 90%; /* Container width adapts on mobile */
+    }
+}
